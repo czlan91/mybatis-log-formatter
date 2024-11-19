@@ -21,7 +21,10 @@ kotlin {
 
 // Configure project's dependencies
 repositories {
-    mavenCentral()
+//    mavenCentral()
+    maven {
+        url = uri("https://maven.aliyun.com/repository/public")
+    }
 
     // IntelliJ Platform Gradle Plugin Repositories Extension - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-repositories-extension.html
     intellijPlatform {
@@ -35,7 +38,8 @@ dependencies {
 
     // IntelliJ Platform Gradle Plugin Dependencies Extension - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-dependencies-extension.html
     intellijPlatform {
-        create(providers.gradleProperty("platformType"), providers.gradleProperty("platformVersion"))
+        // create(providers.gradleProperty("platformType"), providers.gradleProperty("platformVersion"))
+         local("/Users/chenzhuanglan/Applications/IntelliJ IDEA Ultimate.app")
 
         // Plugin Dependencies. Uses `platformBundledPlugins` property from the gradle.properties file for bundled IntelliJ Platform plugins.
         bundledPlugins(providers.gradleProperty("platformBundledPlugins").map { it.split(',') })

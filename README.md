@@ -49,3 +49,10 @@ Plugin based on the [IntelliJ Platform Plugin Template][template].
 
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
 [docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation
+
+
+## 打开 内部模式
+https://plugins.jetbrains.com/docs/intellij/enabling-internal.html
+
+## 如何修改 使用本地 idea的平台
+https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-dependencies-extension.html#custom-target-platforms
